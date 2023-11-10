@@ -7,8 +7,13 @@ gemspec
 
 gem "rake", "~> 13.0"
 
-group :development, :test do
-  gem "rspec", "~> 3.0"
+group :development do
   gem "rubocop", "~> 1.21"
-  gem "rubocop-rspec", require: false
+  gem "rubocop-rspec", "~> 2.25.0"
+end
+
+group :test do
+  gem "rspec", "~> 3.0"
+  gem "simplecov", "~> 0.22.0"
+  gem "webmock", "~> 3.19.1"
 end

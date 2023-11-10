@@ -3,7 +3,26 @@ require:
 
 AllCops:
   NewCops: enable
+  SuggestExtensions: false
   TargetRubyVersion: 2.6
+
+Layout/LineLength:
+  Enabled: false
+
+Lint/NonDeterministicRequireOrder:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
 
 Style/StringLiterals:
   Enabled: true
@@ -12,6 +31,3 @@ Style/StringLiterals:
 Style/StringLiteralsInInterpolation:
   Enabled: true
   EnforcedStyle: double_quotes
-
-Layout/LineLength:
-  Max: 120
