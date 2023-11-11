@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    logsnag-ruby (0.2.0)
+    logsnag-ruby (0.1.0)
       httparty (~> 0.21.0)
 
 GEM
