@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/logsnag-ruby.svg)](https://badge.fury.io/rb/logsnag-ruby)
+
 # logsnag-ruby
 
 Interact with the [LogSnag](https://logsnag.com) API to send logs, identify users, and send insights.
