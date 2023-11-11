@@ -26,6 +26,7 @@ gem install logsnag-ruby
 
 Before you can send logs to LogSnag, you need to configure the gem with your API token and project name.
 This is typically done in an initializer in your application.
+For example:
 
 ```ruby
 # config/initializers/logsnag.rb
