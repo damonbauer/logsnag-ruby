@@ -38,7 +38,8 @@ Pull requests are welcome. Here's how to get started:
 6. Commit your changes: `git commit -am 'Add some feature'`.
 7. Push to the branch: `git push origin my-new-feature`.
 8. Submit a pull request.
-    - Note: the repo uses [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) to automatically manage releases. Please make sure your pull request title follows the correct patterns. Don't worry - it can always be changed before merging. Ask for help if you need it!
+
+Ask for help if you need it!
 
 ### Code Review
 
