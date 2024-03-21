@@ -7,14 +7,16 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.5)
+    addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
-    crack (0.4.5)
+    bigdecimal (3.1.6)
+    crack (1.0.0)
+      bigdecimal
       rexml
     diff-lcs (1.5.0)
     docile (1.4.0)
-    hashdiff (1.0.1)
+    hashdiff (1.1.0)
     httparty (0.21.0)
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
@@ -26,7 +28,7 @@ GEM
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
-    public_suffix (5.0.3)
+    public_suffix (5.0.4)
     racc (1.7.3)
     rainbow (3.1.1)
     rake (13.1.0)
@@ -74,7 +76,7 @@ GEM
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
     unicode-display_width (2.5.0)
-    webmock (3.19.1)
+    webmock (3.23.0)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
@@ -90,7 +92,7 @@ DEPENDENCIES
   rubocop (~> 1.21)
   rubocop-rspec (~> 2.25.0)
   simplecov (~> 0.22.0)
-  webmock (~> 3.19.1)
+  webmock (~> 3.23.0)
 
 BUNDLED WITH
    2.4.19
