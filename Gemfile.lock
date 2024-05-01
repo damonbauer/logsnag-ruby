@@ -31,7 +31,7 @@ GEM
     public_suffix (5.0.4)
     racc (1.7.3)
     rainbow (3.1.1)
-    rake (13.1.0)
+    rake (13.2.1)
     regexp_parser (2.8.2)
     rexml (3.2.6)
     rspec (3.13.0)
@@ -87,7 +87,7 @@ PLATFORMS
 
 DEPENDENCIES
   logsnag-ruby!
-  rake (~> 13.0)
+  rake (~> 13.2)
   rspec (~> 3.13)
   rubocop (~> 1.21)
   rubocop-rspec (~> 2.25.0)

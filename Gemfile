@@ -5,7 +5,7 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in logsnag.gemspec
 gemspec
 
-gem "rake", "~> 13.0"
+gem "rake", "~> 13.2"
 
 group :development do
   gem "rubocop", "~> 1.21"
