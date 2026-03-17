@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     logsnag-ruby (0.1.1)
-      httparty (~> 0.22.0)
+      httparty (~> 0.24.0)
 
 GEM
   remote: https://rubygems.org/
@@ -18,7 +18,7 @@ GEM
     diff-lcs (1.5.1)
     docile (1.4.0)
     hashdiff (1.1.0)
-    httparty (0.22.0)
+    httparty (0.24.0)
       csv
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
