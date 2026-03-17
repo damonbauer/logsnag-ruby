@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/damonbauer/logsnag-ruby/compare/v0.1.1...v0.1.2) (2026-03-17)
+
+
+### Bug Fixes
+
+* **deps:** bump httparty to 0.24 ([4cada70](https://github.com/damonbauer/logsnag-ruby/commit/4cada70ca46aa355e923067d0592c8bafcf4c32c)), closes [#18](https://github.com/damonbauer/logsnag-ruby/issues/18)
+
 ## [0.1.1](https://github.com/damonbauer/logsnag-ruby/compare/v0.1.0...v0.1.1) (2024-05-14)
 
 ### deps
