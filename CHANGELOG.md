@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/damonbauer/logsnag-ruby/compare/v0.1.2...v0.2.0) (2026-04-01)
+
+
+### Features
+
+* add enabled option to disable event sending ([2614f09](https://github.com/damonbauer/logsnag-ruby/commit/2614f093f28a6f228e1afe788e5c4713b2b7216b)), closes [#20](https://github.com/damonbauer/logsnag-ruby/issues/20)
+
 ## [0.1.2](https://github.com/damonbauer/logsnag-ruby/compare/v0.1.1...v0.1.2) (2026-03-17)
 
 
