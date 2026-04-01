@@ -3,8 +3,15 @@
 module LogSnag
   # Configuration class for storing API token, project, and logger
   class Configuration
-    attr_accessor :logger
+    attr_accessor :logger, :enabled
     attr_reader :api_token, :project
+
+    def enabled
+      return @enabled unless @enabled.nil?
+      return false if ENV["LOGSNAG_ENABLED"]&.downcase == "false"
+
+      true
+    end
 
     def api_token=(token)
       raise ArgumentError, "API token cannot be nil" if token.nil? || token.empty?
