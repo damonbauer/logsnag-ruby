@@ -3,8 +3,9 @@
 module LogSnag
   # Configuration class for storing API token, project, and logger
   class Configuration
-    attr_accessor :logger, :enabled
+    attr_accessor :logger
     attr_reader :api_token, :project
+    attr_writer :enabled
 
     def enabled
       return @enabled unless @enabled.nil?
