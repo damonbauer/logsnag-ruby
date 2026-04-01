@@ -117,6 +117,8 @@ module LogSnag
     # @param body [LogSnag::Log,LogSnag::Identify,LogSnag::Insight] The body of the request.
     # @return [LogSnag::Result] The formatted result from the request.
     def execute_post(path, body)
+      return Result.new(success: true, data: nil, status_code: nil, error_message: nil) unless config.enabled
+
       response = post(
         path,
         body: body.to_json,
@@ -133,6 +135,8 @@ module LogSnag
     # @param body [LogSnag::Insight] The body of the request.
     # @return [LogSnag::Result] The formatted result from the request.
     def execute_patch(path, body)
+      return Result.new(success: true, data: nil, status_code: nil, error_message: nil) unless config.enabled
+
       response = patch(
         path,
         body: {

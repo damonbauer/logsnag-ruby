@@ -5,6 +5,14 @@ module LogSnag
   class Configuration
     attr_accessor :logger
     attr_reader :api_token, :project
+    attr_writer :enabled
+
+    def enabled
+      return @enabled unless @enabled.nil?
+      return false if ENV["LOGSNAG_ENABLED"]&.downcase == "false"
+
+      true
+    end
 
     def api_token=(token)
       raise ArgumentError, "API token cannot be nil" if token.nil? || token.empty?

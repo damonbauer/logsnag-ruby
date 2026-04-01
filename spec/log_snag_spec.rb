@@ -512,4 +512,101 @@ RSpec.describe LogSnag do
       end
     end
   end
+
+  describe "when disabled" do
+    let(:data) do
+      {
+        channel: "test-channel",
+        event: "test-event"
+      }
+    end
+
+    before do
+      described_class.configure do |config|
+        config.api_token = "123456"
+        config.project = "test-project"
+        config.logger = Logger.new($stdout)
+        config.enabled = false
+      end
+    end
+
+    after do
+      described_class.configure do |config|
+        config.enabled = true
+      end
+    end
+
+    describe ".log" do
+      it "does not make an HTTP request and returns a successful result" do
+        result = described_class.log(data)
+
+        expect(a_request(:post, "https://api.logsnag.com/v1/log")).not_to have_been_made
+        expect(result).to be_a(LogSnag::Result)
+        expect(result.success).to be(true)
+        expect(result.data).to be_nil
+        expect(result.error_message).to be_nil
+        expect(result.status_code).to be_nil
+      end
+    end
+
+    describe ".identify" do
+      let(:data) do
+        {
+          user_id: "test-user-id",
+          properties: { email: "test-user@example.com" }
+        }
+      end
+
+      it "does not make an HTTP request and returns a successful result" do
+        result = described_class.identify(data)
+
+        expect(a_request(:post, "https://api.logsnag.com/v1/identify")).not_to have_been_made
+        expect(result).to be_a(LogSnag::Result)
+        expect(result.success).to be(true)
+        expect(result.data).to be_nil
+        expect(result.error_message).to be_nil
+        expect(result.status_code).to be_nil
+      end
+    end
+
+    describe ".insight" do
+      let(:data) do
+        {
+          title: "test-title",
+          value: 123
+        }
+      end
+
+      it "does not make an HTTP request and returns a successful result" do
+        result = described_class.insight(data)
+
+        expect(a_request(:post, "https://api.logsnag.com/v1/insight")).not_to have_been_made
+        expect(result).to be_a(LogSnag::Result)
+        expect(result.success).to be(true)
+        expect(result.data).to be_nil
+        expect(result.error_message).to be_nil
+        expect(result.status_code).to be_nil
+      end
+    end
+
+    describe ".mutate_insight" do
+      let(:data) do
+        {
+          title: "test-title",
+          value: 1
+        }
+      end
+
+      it "does not make an HTTP request and returns a successful result" do
+        result = described_class.mutate_insight(data)
+
+        expect(a_request(:patch, "https://api.logsnag.com/v1/insight")).not_to have_been_made
+        expect(result).to be_a(LogSnag::Result)
+        expect(result.success).to be(true)
+        expect(result.data).to be_nil
+        expect(result.error_message).to be_nil
+        expect(result.status_code).to be_nil
+      end
+    end
+  end
 end
